@@ -24,4 +24,6 @@ el curso completo lo puedes encontrar en:  [http://joincfe.com/courses/rest-api]
 
 [6 - JSON Class Based View y JSON  Response Mixin](https://github.com/Cuahutli/rest-api/tree/df96129f6e0ae54fb479662fca61f7ae574f8942)
 
-7 - Serializando Datos
+[7 - Serializando Datos](https://github.com/Cuahutli/rest-api/tree/409f18e05197bc35f6f66f53b0a3b3431afde9c9)
+
+8 - Managers y Métodos para producir datos serializados
