@@ -13,5 +13,7 @@ el curso completo lo puedes encontrar en:  [http://joincfe.com/courses/rest-api]
 
 ### Sección 2 | API con Django puro
 *1 - Requisitos: no lleva código*
-[2 - Creando (iniciando) un nuevo proyecto](https://github.com/Cuahutli/rest-api/commit/17900fc6d4ae4a022111679700356d5cde5348a7)
+
+[2 - Creando (iniciando) un nuevo proyecto](https://github.com/Cuahutli/rest-api/tree/17900fc6d4ae4a022111679700356d5cde5348a7)
+
 3- Creando la app "Updates" y el modelo
