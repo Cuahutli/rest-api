@@ -15,8 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from updates.views import json_example_view
+from updates.views import json_example_view, JsonCVB, JsonCVB2
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^json/cbv/$', JsonCVB.as_view()),
+    url(r'^json/cbv2/$', JsonCVB2.as_view()),
     url(r'^json/example/$', json_example_view),
 ]
