@@ -1,4 +1,4 @@
-REST-API
+#REST-API
 
 Construye una API Rest utilizando Python, Django y Django Rest Framework.
 
@@ -9,8 +9,9 @@ Este curso trata de enseñarte como construir una API REST con Python, Django, D
 el curso completo lo puedes encontrar en:  [http://joincfe.com/courses/rest-api](https://www.codingforentrepreneurs.com/courses/rest-api/)
 
 ### Sección 1 | Conceptos Básicos sobre API
-* Sección de Conceptos, no se realiza código*
+*Sección de Conceptos, no se realiza código*
 
 ### Sección 2 | API con Django puro
-*1 - Requisitos: no lleva código *
-2 - Creando (iniciando) un nuevo proyecto
+*1 - Requisitos: no lleva código*
+[2 - Creando (iniciando) un nuevo proyecto](https://github.com/Cuahutli/rest-api/commit/17900fc6d4ae4a022111679700356d5cde5348a7)
+3- Creando la app "Updates" y el modelo
