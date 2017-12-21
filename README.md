@@ -18,4 +18,6 @@ el curso completo lo puedes encontrar en:  [http://joincfe.com/courses/rest-api]
 
 [3- Creando la app "Updates" y el modelo](https://github.com/Cuahutli/rest-api/tree/e40b0ff43b36aae4a23545663a2faa695971410d)
 
-4 - Un JSON Response
+[4 - Un JSON Response](https://github.com/Cuahutli/rest-api/tree/0a3ae50ab954246fbd40f464e65617d8802c959f)
+
+5 - HttpResponse con Datos JSON
