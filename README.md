@@ -1,4 +1,4 @@
-#REST-API
+# REST-API
 
 Construye una API Rest utilizando Python, Django y Django Rest Framework.
 
@@ -16,4 +16,6 @@ el curso completo lo puedes encontrar en:  [http://joincfe.com/courses/rest-api]
 
 [2 - Creando (iniciando) un nuevo proyecto](https://github.com/Cuahutli/rest-api/tree/17900fc6d4ae4a022111679700356d5cde5348a7)
 
-3- Creando la app "Updates" y el modelo
+[3- Creando la app "Updates" y el modelo](https://github.com/Cuahutli/rest-api/tree/e40b0ff43b36aae4a23545663a2faa695971410d)
+
+4 - Un JSON Response
