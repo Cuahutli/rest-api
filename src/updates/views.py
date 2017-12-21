@@ -1,5 +1,6 @@
 import json
 
+from django.core.serializers import serialize
 from django.http import JsonResponse, HttpResponse
 from django.shortcuts import render
 from django.views.generic import View
@@ -42,3 +43,20 @@ class JsonCVB2(JsonResponseMixin, View):
             "content": "Un nuevo contenido",
         }
         return self.render_to_json_response(data)
+
+class SerializedDetailView(View):
+    def get(self, request, *args, **kwargs):
+        obj = Update.objects.get(id=1)
+        data = serialize("json", [obj, ], fields=('user', 'content'))
+        print(data)
+        #json_data = json.dumps(data)
+        return HttpResponse(data, content_type="application/json")
+
+
+class SerializedListView(View):
+    def get(self, request, *args, **kwargs):
+        obj = Update.objects.all()
+        data = serialize("json", obj, fields=('user', 'content'))
+        print(data)
+        #json_data = json.dumps(data)
+        return HttpResponse(data, content_type="application/json")
