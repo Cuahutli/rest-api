@@ -34,4 +34,6 @@ el curso completo lo puedes encontrar en:  [http://joincfe.com/courses/rest-api]
 
 [11 - Práctica: Módulo API - Parte II](https://github.com/Cuahutli/rest-api/tree/e55710704c9b97ad5db1dd55844389d5e9e8f5db)
 
-12 - Usando la API con Python Requests
+[12 - Usando la API con Python Requests](https://github.com/Cuahutli/rest-api/tree/aca43f5293bd9979564a941b458e5f92205a117c)
+
+13 - Manejando errores
