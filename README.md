@@ -36,4 +36,6 @@ el curso completo lo puedes encontrar en:  [http://joincfe.com/courses/rest-api]
 
 [12 - Usando la API con Python Requests](https://github.com/Cuahutli/rest-api/tree/aca43f5293bd9979564a941b458e5f92205a117c)
 
-13 - Manejando errores
+[13 - Manejando errores](https://github.com/Cuahutli/rest-api/tree/d825f9e895ae126a8ec5f4a8262d355d787b8044)
+
+14 - Http Códigos de status
