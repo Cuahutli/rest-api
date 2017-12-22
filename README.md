@@ -44,4 +44,6 @@ el curso completo lo puedes encontrar en:  [http://joincfe.com/courses/rest-api]
 
 [16 - Actualizar & Eliminar](https://github.com/Cuahutli/rest-api/tree/ecf038246e0926fa8224a42b8db6127705de4433) 
 
-17 - Validando JSON
+[17 - Validando JSON](https://github.com/Cuahutli/rest-api/tree/3f091b6a6ca19d0f810dddb7f7709f7358ebbbd2)
+
+18 - Actualizar & Eliminar - Parte II
