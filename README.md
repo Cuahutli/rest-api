@@ -28,4 +28,6 @@ el curso completo lo puedes encontrar en:  [http://joincfe.com/courses/rest-api]
 
 [8 - Managers y Métodos para producir datos serializados](https://github.com/Cuahutli/rest-api/tree/fde897a3407e29441f7aa35b560f31fe26a886db)
 
-9 - El método".values( )"
+[9 - El método".values( )"](https://github.com/Cuahutli/rest-api/tree/f1c4088ec09fceaf4448a5bfc57861e554c748ce)
+
+10 - Práctica: Módulo API
