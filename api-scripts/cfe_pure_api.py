@@ -24,11 +24,51 @@ def create_update():
         "user":1,
         "content": "Todavía mejor y cool Otra gran actualización"
     }
-    r = requests.post(BASE_URL + ENDPOINT + "1/", data=new_data)
+    r = requests.post(BASE_URL + ENDPOINT + "1/", data=json.dumps(new_data))
     print(r.status_code)
     if r.status_code == requests.codes.ok:
         return r.json()
     return r.text
 
 #print(get_list())
-print(create_update())
+#print(create_update())
+
+def do_obj_update():
+    new_data = {
+        "content": "Nuevo dato de objeto"
+    }
+    r = requests.put(BASE_URL + ENDPOINT + "1/", data=json.dumps(new_data))
+    
+    # new_data = {
+    #     "id":1,
+    #     "content": "Todavía mejor y cool Otra gran actualización"
+    # }
+    # r = requests.put(BASE_URL + ENDPOINT, data=new_data)
+    # print(r.json())
+    # print(r.hedaers)
+    print(r.status_code)
+    if r.status_code == requests.codes.ok:
+        return r.json()
+    return r.text
+
+
+def do_obj_delete():
+    new_data = {
+        "content": "Nuevo dato de objeto"
+    }
+    r = requests.delete(BASE_URL + ENDPOINT + "1/")
+    
+    # new_data = {
+    #     "id":1,
+    #     "content": "Todavía mejor y cool Otra gran actualización"
+    # }
+    # r = requests.put(BASE_URL + ENDPOINT, data=new_data)
+    # print(r.json())
+    # print(r.hedaers)
+    print(r.status_code)
+    if r.status_code == requests.codes.ok:
+        return r.json()
+    return r.text
+
+print(do_obj_update())
+print(do_obj_delete())

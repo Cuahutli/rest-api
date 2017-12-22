@@ -12,8 +12,26 @@ class UpdateModelDetailAPIView(HttpResponseMixin, CSRFExemptMixin, View):
         Detail (Retrieve), Update, Delete --> Object
     """
     is_json = True 
+    def get_object(self, id=None):
+        # try:
+        #     obj = UpdateModel.objects.get(id=id)
+        # except UpdateModel.DoesNotExists:
+        #     obj = None
+        # return obj
+        """
+            El método de abajo también maneja si no existe
+        """
+        qs = UpdateModel.objects.filter(id=id)
+        if qs.count() == 1:
+            return qs.first()
+        return None
+
+
     def get(self, request, id, *args, **kwargs):
-        obj = UpdateModel.objects.get(id=id)
+        obj = self.get_object(id=id)
+        if obj is None:
+            error_data = json.dumps({"message": "Update nno encontrado"})
+            return self.render_to_response(error_data, status=404)    
         json_data = obj.serialize()
         return self.render_to_response(json_data)
     
@@ -21,12 +39,26 @@ class UpdateModelDetailAPIView(HttpResponseMixin, CSRFExemptMixin, View):
         json_data = json.dumps({"message": "No permitido, por favor usa /api/updates/ para crear."})
         return self.render_to_response(json_data, status=403)
 
-    def put(self, request, *args, **kwargs):
-        json_data = {}
-        return self.render_to_response(json_data, status=403)
+    def put(self, request, id, *args, **kwargs):
+        obj = self.get_object(id=id)
+        if obj is None:
+            error_data = json.dumps({"message": "Update nno encontrado"})
+            return self.render_to_response(error_data, status=404)    
+  
+        #print(dir(request))
+        print(request.body)
+        #print(request.data)
+        new_data = json.loads(request.body.decode('utf-8'))
+        print(new_data['content'])
+        json_data = json.dumps({"message":"something"})
+        return self.render_to_response(new_data, status=403)
 
-    def delete(self, request, *args, **kwargs):
-        json_data = {}
+    def delete(self, request, id, *args, **kwargs):
+        obj = self.get_object(id=id)
+        if obj is None:
+            error_data = json.dumps({"message": "Update nno encontrado"})
+            return self.render_to_response(error_data, status=404)    
+        json_data = json.dumps({"message":"something with delete"})
         return self.render_to_response(json_data, status=403)
 
 

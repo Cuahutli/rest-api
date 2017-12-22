@@ -40,4 +40,6 @@ el curso completo lo puedes encontrar en:  [http://joincfe.com/courses/rest-api]
 
 [14 - Http Códigos de status](https://github.com/Cuahutli/rest-api/tree/f788d87dc3704a0e8d1f471db617fed70c29af33)
 
-15 - Validando datos con un Model Form
+[15 - Validando datos con un Model Form](https://github.com/Cuahutli/rest-api/tree/791523c858fd8edc6ff87dcc42fec19be95bc333)
+
+16 - Actualizar & Eliminar
