@@ -42,4 +42,6 @@ el curso completo lo puedes encontrar en:  [http://joincfe.com/courses/rest-api]
 
 [15 - Validando datos con un Model Form](https://github.com/Cuahutli/rest-api/tree/791523c858fd8edc6ff87dcc42fec19be95bc333)
 
-16 - Actualizar & Eliminar
+[16 - Actualizar & Eliminar](https://github.com/Cuahutli/rest-api/tree/ecf038246e0926fa8224a42b8db6127705de4433) 
+
+17 - Validando JSON

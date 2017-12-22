@@ -5,6 +5,8 @@ from updates.models import Update as UpdateModel
 from updates.forms import UpdateModelForm
 from cfeapi.mixins import  HttpResponseMixin
 from .mixins import CSRFExemptMixin
+from .utils import is_json
+
 
 # Creating, Updating, Deleting, Retrieving(1) --Update Model
 class UpdateModelDetailAPIView(HttpResponseMixin, CSRFExemptMixin, View):
@@ -47,6 +49,11 @@ class UpdateModelDetailAPIView(HttpResponseMixin, CSRFExemptMixin, View):
   
         #print(dir(request))
         print(request.body)
+        valid_json = is_json(request.body)
+        if not valid_json:
+            error_data = json.dumps({"message": "Datos enviados son invalidos, por favor envía un JSON"})
+            return self.render_to_response(error_data, status=404)    
+
         #print(request.data)
         new_data = json.loads(request.body.decode('utf-8'))
         print(new_data['content'])
@@ -75,8 +82,13 @@ class UpdateModelListAPIView(HttpResponseMixin, CSRFExemptMixin, View):
         return self.render_to_response(json_data)
 
     def post(self, request, *args, **kwargs):
+        valid_json = is_json(request.body)
+        if not valid_json:
+            error_data = json.dumps({"message": "Datos enviados son invalidos, por favor envía un JSON"})
+            return self.render_to_response(error_data, status=404)   
         #print(request.POST)
-        form = UpdateModelForm(request.POST)
+        data = json.loads(request.body.decode('utf-8'))
+        form = UpdateModelForm(data)
         if form.is_valid():
             obj = form.save(commit=True)
             obj_data = obj.serialize()
