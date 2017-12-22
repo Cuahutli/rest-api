@@ -30,4 +30,6 @@ el curso completo lo puedes encontrar en:  [http://joincfe.com/courses/rest-api]
 
 [9 - El método".values( )"](https://github.com/Cuahutli/rest-api/tree/f1c4088ec09fceaf4448a5bfc57861e554c748ce)
 
-10 - Práctica: Módulo API
+[10 - Práctica: Módulo API](https://github.com/Cuahutli/rest-api/tree/9059564035f48cbf0c69c0e881c40c58903b07db)
+
+11 - Práctica: Módulo API - Parte II
