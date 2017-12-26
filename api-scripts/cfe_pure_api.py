@@ -4,18 +4,16 @@ import json
 BASE_URL = "http://localhost:8000/"
 
 ENDPOINT = "api/updates/"
-def get_list(): # Lists all this out
-    r = requests.get(BASE_URL + ENDPOINT)
+def get_list(id=None): # Lists all this out
+    data = json.dumps({})
+    if id is not None:
+        data = json.dumps({"id": id})
+    r = requests.get(BASE_URL + ENDPOINT, data=data)
     print(r.status_code)
+    status_code = r.status_code
+    if status_code != 200:
+        print('Algo salió mal')
     data = r.json()
-    print(type(data))
-    print(type(json.dumps(data)))
-    for obj in data:
-        #print(obj['id'])
-        if obj['id'] == 1: #--> User interaction
-            r2 = requests.get(BASE_URL + ENDPOINT + str(obj['id']))
-            #print(dir(r2))
-            print(r2.json())
     return data
 
 
@@ -30,15 +28,17 @@ def create_update():
         return r.json()
     return r.text
 
-#print(get_list())
+print(get_list())
 #print(create_update())
 
 def do_obj_update():
     new_data = {
+        "id": 5,
         "content": "Nuevo dato de objeto maravilloso"
     }
-    r = requests.put(BASE_URL + ENDPOINT + "8/", data=json.dumps(new_data))
+    r = requests.put(BASE_URL + ENDPOINT, data=json.dumps(new_data))
     
+
     # new_data = {
     #     "id":1,
     #     "content": "Todavía mejor y cool Otra gran actualización"
@@ -54,9 +54,10 @@ def do_obj_update():
 
 def do_obj_delete():
     new_data = {
+        "id": 5,
         "content": "Nuevo dato de objeto"
     }
-    r = requests.delete(BASE_URL + ENDPOINT + "6/")
+    r = requests.delete(BASE_URL + ENDPOINT, data=json.dumps(new_data))
     
     # new_data = {
     #     "id":1,
@@ -71,4 +72,4 @@ def do_obj_delete():
     return r.text
 
 #print(do_obj_update())
-print(do_obj_delete())
+#print(do_obj_delete())

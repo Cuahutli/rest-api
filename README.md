@@ -46,4 +46,6 @@ el curso completo lo puedes encontrar en:  [http://joincfe.com/courses/rest-api]
 
 [17 - Validando JSON](https://github.com/Cuahutli/rest-api/tree/3f091b6a6ca19d0f810dddb7f7709f7358ebbbd2)
 
-18 - Actualizar & Eliminar - Parte II
+[18 - Actualizar & Eliminar - Parte II](https://github.com/Cuahutli/rest-api/tree/bd447d9c5a3cab5ea8dc6b7f5a39d5070cc9a7df)
+
+19 - un solo endpoint para todas las reglas del modelo
